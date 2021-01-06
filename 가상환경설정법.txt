@@ -1,0 +1,7 @@
+# virtualenv 설치
+    pip install virtualenv
+# virtualenv 구성
+    virtualenv myvenv
+# virtualenv 실행
+    myvenv\scripts\activate
+

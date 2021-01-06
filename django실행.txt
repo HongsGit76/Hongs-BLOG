@@ -1,0 +1,15 @@
+# django 설치
+    pip install django
+
+# django 프로젝트 생성
+    django-admin startproject [이름]
+
+# 데이터 모델 변경점 확인
+    python manage.py makemigrations
+
+# 데이터 모델 DB에 반영
+    python manage.py migrate
+
+# django 개발 서버 실행
+    python manage.py runserver
+    - django 기본 웹 주소 - http://127.0.0.1:8000/

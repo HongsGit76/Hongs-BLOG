@@ -23,6 +23,12 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
-    # 1번 글의 경우 -> single/1
+    # 1번 글의 경우 -> post/1
     def get_absolute_url(self):
-        return reverse("single", args=[str(self.id)])
+        return reverse("post", args=[str(self.id)])
+
+    def is_content_more50(self):
+        return len(self.content) > 50
+
+    def get_content_under50(self):
+        return self.content[:300]

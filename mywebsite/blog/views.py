@@ -7,3 +7,10 @@ def index(req):
     }
 
     return render(req, 'index.html', context=context)
+
+def post(req):
+    context = {
+
+    }
+
+    return render(req, 'post.html', context=context)

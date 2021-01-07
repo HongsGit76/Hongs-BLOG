@@ -1,0 +1,2 @@
+이미지 모듈 이용
+    pip install Pillow

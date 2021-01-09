@@ -1,2 +1,5 @@
-이미지 모듈 이용
+이미지 모듈 설치
     pip install Pillow
+
+폼 꾸미기 모듈 설치
+    pip install django-widget-tweaks 

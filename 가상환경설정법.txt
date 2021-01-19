@@ -4,4 +4,5 @@
     virtualenv myvenv
 # virtualenv 실행
     myvenv\scripts\activate
-
+# 현재 깔려있는 모듈 확인
+    pip freeze > module.txt

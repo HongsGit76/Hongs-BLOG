@@ -26,7 +26,7 @@ SECRET_KEY = 'cltdc&(oy@pls=)-s^y!n-mlqi5up#0!=ko61#wu&k@n1(^01)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition

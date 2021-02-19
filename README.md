@@ -138,3 +138,7 @@
             include /etc/nginx/uwsgi_params;
         }
     }
+
+### License
+
+[bootstrap]("https://github.com/startbootstrap/startbootstrap-clean-blog/blob/master/LICENSE")

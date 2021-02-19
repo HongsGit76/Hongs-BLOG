@@ -3,3 +3,22 @@
 
 폼 꾸미기 모듈 설치
     pip install django-widget-tweaks 
+
+설치된 모듈 확인
+    pip list
+
+모듈 설치
+    pip install -r <파일명>
+
+장고 어드민 계정 기억 안날 때
+    python manage.py shell
+    
+    >>> from django.contrib.auth.models import User
+
+    >>> superuers = User.objects.filter(is_superuser=True)
+
+    >>> supersuers
+    => 아이디 나옴
+
+장고 어드민 계정 비밀번호 수정
+    python manage.py changepassword admin

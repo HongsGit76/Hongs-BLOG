@@ -2,69 +2,78 @@
 
 내가 공부한 내용을 정리하기 위한 블로그 +돈, 시간 관리를 위한 대시보드 생성
 
----
-
 ## Virtual Envirment
 
 **virtualenv 설치**
-pip install virtualenv
-**virtualenv 구성**
-virtualenv myvenv
-**virtualenv 실행**
-myvenv\scripts\activate
 
----
+    pip install virtualenv
+
+**virtualenv 구성**
+
+    virtualenv myvenv
+
+**virtualenv 실행**
+
+    myvenv\scripts\activate
 
 ## Django
 
 **django 설치**
-pip install django
+
+    pip install django
 
 **django 프로젝트 생성**
-django-admin startproject [이름]
+
+    django-admin startproject [이름]
 
 **데이터 모델 변경점 확인**
-python manage.py makemigrations
+
+    python manage.py makemigrations
 
 **데이터 모델 DB에 반영**
-python manage.py migrate
+
+    python manage.py migrate
 
 **django 개발 서버 실행**
-python manage.py runserver - django 기본 웹 주소 - http://127.0.0.1:8000/
+
+    python manage.py runserver - django 기본 웹 주소 - http://127.0.0.1:8000/
 
 **django admin 관리자 계정 생성**
-python manage.py createsuperuser
 
----
+    python manage.py createsuperuser
 
 ## 추가 커맨드
 
 **이미지 모듈 설치**
-pip install Pillow
+
+    pip install Pillow
 
 **폼 꾸미기 모듈 설치**
-pip install django-widget-tweaks
+
+    pip install django-widget-tweaks
 
 **설치된 모듈 확인**
-pip list
+
+    pip list
 
 **모듈 설치**
-pip install -r <파일명>
+
+    pip install -r <파일명>
 
 **장고 어드민 계정 기억 안날 때**
-python manage.py shell
 
-    >>> from django.contrib.auth.models import User
+    python manage.py shell
 
-    >>> superuers = User.objects.filter(is_superuser=True)
+        >>> from django.contrib.auth.models import User
 
-    >>> supersuers
-    => 아이디 나옴
+        >>> superuers = User.objects.filter(is_superuser=True)
+
+        >>> supersuers
+        => 아이디 나옴
 
 **장고 어드민 계정 비밀번호 수정**
-python manage.py changepassword admin
 
----
+    python manage.py changepassword admin
 
 ## UWSGI 설정파일
 
@@ -104,8 +113,6 @@ python manage.py changepassword admin
 
 **실행** : uwsgi -i /etc/uwsgi/sites/mywebsite.ini
 
----
-
 # Nginx 설정파일
 
 **nginx 설정**
@@ -121,7 +128,11 @@ python manage.py changepassword admin
     }
         server {
         listen 80;
-        server_name localhost;                                                                                                               charset utf-8;                                                                                                                           client_max_body_size 75M;                                                                                                             location / {
-            uwsgi_pass django;                                                                                                                   include /etc/nginx/uwsgi_params;
+        server_name localhost;
+        charset utf-8;
+        client_max_body_size 75M;
+        location / {
+            uwsgi_pass django;
+            include /etc/nginx/uwsgi_params;
         }
     }

@@ -137,6 +137,3 @@
         }
     }
 
-### License
-
-bootstrap : [MIT License](https://github.com/startbootstrap/startbootstrap-clean-blog/blob/master/LICENSE)
